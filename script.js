@@ -17,7 +17,7 @@ const links = {
     instagram: "https://instagram.com/aadtyrst",
     whatsapp: "https://wa.me/62895402634106",
     linkedin: "https://www.linkedin.com/in/muhamad-aditya-restu-prawira-7865a6397",
-    portfolio: "profil.html",
+    portfolio: "Personal Website.html",
     email: "mailto:mhmadaditya59@gmail.com"
 };
 
