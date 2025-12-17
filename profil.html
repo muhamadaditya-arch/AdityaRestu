@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        :root {
+            --bg: #f5f5f5;
+            --text: #1f2933;
+            --card: #ffffff;
+            --primary: #111827;
+        }
+        body.dark {
+            --bg: #0b0b0b;
+            --text: #e5e7eb;
+            --card: #161616;
+            --primary: #f9fafb;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: background .4s, color .4s;
+        }
+        header {
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 20px;
+            position: relative;
+        }
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        @keyframes float {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s forwards;
+        }
+        section:nth-of-type(2) { animation-delay: .2s }
+        section:nth-of-type(3) { animation-delay: .4s }
+        section:nth-of-type(4) { animation-delay: .6s }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .skill {
+            background: var(--card);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            font-weight: bold;
+            transition: transform .3s;
+        }
+        .skill:hover { transform: scale(1.05); }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 700px;
+            margin: auto;
+        }
+        .project {
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform .3s;
+        }
+        .project:hover { transform: translateY(-6px); }
+        .project img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: none;
+        }
+        .project img.active {
+            display: block;
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #9ca3af;
+            cursor: pointer;
+        }
+        .dot.active {
+            background: var(--primary);
+        }
+        .project p { padding: 15px; }
+        .contact {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.05);
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="toggle" onclick="toggleMode()">🌙 Dark</button>
+    <img src="Restu.jpeg" alt="Foto Profil">
+    <h1>Muhamad Aditya Restu Prawira</h1>
+    <p>Web Developer | UI/UX Enthusiast</p>
+</header>
+
+<section>
+    <h2>Skills</h2>
+    <div class="skills" style="grid-template-columns: 1fr; max-width:400px; margin:auto;">
+        <div class="skill" onclick="showSkill('HTML','HTML is the standard markup language used to create and structure web pages. It defines content such as text, images, links, and forms.')">HTML</div>
+        <div class="skill" onclick="showSkill('CSS','CSS is used to style and layout web pages, for example to change colors, fonts, spacing, and create responsive designs.')">CSS</div>
+        <div class="skill" onclick="showSkill('JavaScript','JavaScript is a programming language that allows you to create interactive and dynamic web experiences such as animations and real-time updates.')">JavaScript</div>
+        <div class="skill" onclick="showSkill('PHP','PHP is a server-side scripting language commonly used to build dynamic websites and web applications.')">PHP</div>
+        <div class="skill" onclick="showSkill('UI/UX Design','UI/UX Design focuses on creating visually appealing interfaces and meaningful, user-friendly experiences.')">UI/UX Design</div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section>
+    <h2>Project</h2>
+    <div class="projects">
+        <div class="project">
+            <div class="slider">
+                <img src="A1.jpg" class="active">
+                <img src="A2.jpg">
+                <img src="A3.jpg">
+            </div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <p>Toko Online</p>
+        </div>
+
+        <div class="project">
+            <div class="slider">
+                <img src="B1.png" class="active">
+                <img src="B2.png">
+                <img src="B3.png">
+            </div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <p>System Smart Inventory Management</p>
+        </div>
+
+        <div class="project">
+            <div class="slider">
+                <img src="C1.png" class="active">
+                <img src="C2.png">
+                <img src="C3.png">
+            </div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <p>Website Toko Online</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="contact">
+        <p><strong>Email</strong><br>Mhmadaditya59@email.com</p>
+        <p><strong>Phone / WhatsApp</strong><br>+62 89544 0263 4106</p>
+        <p><strong>LinkedIn</strong><br>linkedin.com/in/mhmadaditya</p>
+    </div>
+</section>
+
+<!-- Modal Skill -->
+<div id="skillModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); align-items:center; justify-content:center; z-index:1000;">
+    <div style="background:var(--card); color:var(--text); padding:25px; max-width:400px; border-radius:14px; text-align:center; animation:fadeUp .4s;">
+        <h3 id="skillTitle" style="color:var(--primary); margin-bottom:10px;"></h3>
+        <p id="skillDesc"></p>
+        <button onclick="closeSkill()" style="margin-top:15px; padding:8px 16px; border:none; border-radius:20px; background:var(--primary); color:white; cursor:pointer;">Close</button>
+    </div>
+</div>
+
+<footer>
+    © 2025 - Personal Profile
+</footer>
+
+<script>
+function showSkill(title, desc){
+    document.getElementById('skillTitle').innerText = title;
+    document.getElementById('skillDesc').innerText = desc;
+    document.getElementById('skillModal').style.display = 'flex';
+}
+function closeSkill(){
+    document.getElementById('skillModal').style.display = 'none';
+}
+function toggleMode(){
+    document.body.classList.toggle('dark');
+}
+
+// Auto Slider
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+    const images = project.querySelectorAll('img');
+    const dots = project.querySelectorAll('.dot');
+    let index = 0;
+
+    setInterval(() => {
+        images[index].classList.remove('active');
+        dots[index].classList.remove('active');
+        index = (index + 1) % images.length;
+        images[index].classList.add('active');
+        dots[index].classList.add('active');
+    }, 5000);
+});
+</script>
+</script>
+
+</body>
+</html>
