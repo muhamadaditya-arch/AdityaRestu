@@ -12,5 +12,5 @@
 - JavaScript
 
 ## 📩 Kontak
-Instagram: https://instagram.com/usernamekamu  
-WhatsApp: https://wa.me/628xxxxxxxxxx
+Instagram: https://instagram.com/aadtyrst
+WhatsApp: https://wa.me/62895402634106
