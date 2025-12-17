@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Restu | Web & System Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Professional portfolio of Restu Aditya, Web & System Developer">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1 class="logo">Restu<span>.</span></h1>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="https://linkedin.com/in/mhmadaditya" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+
+    <button id="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" class="hero reveal">
+  <div class="profile">
+    <img src="Restu.jpeg" alt="Restu Aditya">
+  </div>
+
+  <h2>Muhamad Aditya Restu Prawira</h2>
+  <h4>Web & System Developer</h4>
+
+  <p>
+    Building clean, scalable, and well-structured web systems
+    that transform ideas into reliable digital solutions.
+  </p>
+
+  <div class="cta">
+    <a href="#portfolio" class="btn primary">View Portfolio</a>
+    <a href="cv-restu.pdf" class="btn outline" download>
+      <i class="fas fa-file-download"></i> Download CV
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container reveal">
+  <h3>About Me</h3>
+
+  <p>
+    I am <strong>Muhamad Aditya Restu Prawira</strong>, an informatics engineering graduate
+    with a strong interest in web development and system-oriented design.
+    I enjoy building digital solutions that are structured, efficient,
+    and easy to maintain.
+  </p>
+
+  <p>
+    My approach focuses on understanding business needs,
+    translating them into clear system logic,
+    and delivering applications that are both functional
+    and user-friendly.
+  </p>
+
+  <p>
+    With a passion for continuous learning,
+    I aim to create systems that not only work well today
+    but are also ready to grow and evolve in the future.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="container reveal">
+  <h3>Skills</h3>
+
+  <div class="skills-grid">
+    <div><i class="fas fa-code"></i> HTML, CSS, JavaScript</div>
+    <div><i class="fas fa-server"></i> PHP, Laravel, MySQL</div>
+    <div><i class="fas fa-diagram-project"></i> ERD, Flowchart</div>
+    <div><i class="fab fa-github"></i> GitHub </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="container reveal">
+  <h3>Portfolio</h3>
+
+  <div class="portfolio">
+    <div class="card" data-modal="modal1">
+      <h4>Inventory Management System</h4>
+      <p>Stock control & reporting system</p>
+    </div>
+
+    <div class="card" data-modal="modal2">
+      <h4>Studi Platform</h4>
+      <p>Structured & responsive system</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container reveal">
+  <h3>Contact</h3>
+
+  <div class="contact-list">
+    <a href="mailto:mhmadaditya59@gmail.com">
+      <i class="fas fa-envelope"></i> mhmadaditya59@gmail.com
+    </a>
+
+    <a href="https://wa.me/62895402634106" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <a href="https://linkedin.com/in/mhmadaditya" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 Aditya Restu</p>
+</footer>
+
+<!-- MODAL 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-box">
+    <div class="slider" data-index="0">
+      <div class="slides">
+        <img src="B1.png" class="slide active">
+        <img src="B2.png" class="slide">
+        <img src="B3.png" class="slide">
+      </div>
+
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+
+    <h4>Inventory Management System</h4>
+    <p>System to improve stock accuracy, reporting, and data control.</p>
+    <small>PHP • MySQL • HTML • CSS</small>
+    <hr class="modal-divider">
+<div class="modal-footer">
+  <button class="close-btn">Close</button>
+</div>
+  </div>
+</div>
+
+<!-- MODAL 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-box">
+    <div class="slider" data-index="0">
+      <div class="slides">
+        <img src="C1.png" class="slide active">
+        <img src="C2.png" class="slide">
+        <img src="C3.png" class="slide">
+      </div>
+
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+
+    <h4>Studi Platform</h4>
+    <p>Responsive and structured Studi Platform.</p>
+    <small>HTML • CSS • JavaScript</small>
+    <hr class="modal-divider">
+<div class="modal-footer">
+  <button class="close-btn">Close</button>
+</div>
+  </div>
+</div>
+
+<script src="script1.js"></script>
+</body>
+</html>
